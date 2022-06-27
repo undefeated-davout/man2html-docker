@@ -1,0 +1,33 @@
+name: Push to Docker registry
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Docker Hubにログイン
+        uses: actions-hub/docker/login@master
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_REGISTRY_URL: docker.io
+
+      - name: Dockerビルド
+        if: success()
+        run: docker build -t undefeateddavout/man2html-docker:latest .
+
+      - name: image確認
+        if: success()
+        run: docker images
+
+      - name: Docker Hubにpush
+        if: success()
+        uses: actions-hub/docker@master
+        with:
+          args: push undefeateddavout/man2html-docker:latest
