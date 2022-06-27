@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  man2html:
+    build: .
+    container_name: man2html
+    tty: true
+    restart: always
+    ports:
+      - 8050:80
+    privileged: true
