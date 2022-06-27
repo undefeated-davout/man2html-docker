@@ -20,6 +20,7 @@ RUN apt install -y\
   netcat-openbsd \
   nmap \
   tar \
+  tmux \
   unzip \
   wget \
   && apt autoremove && apt autoclean
