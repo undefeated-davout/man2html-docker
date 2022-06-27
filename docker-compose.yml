@@ -7,4 +7,3 @@ services:
     restart: always
     ports:
       - 8050:80
-    privileged: true
