@@ -15,6 +15,7 @@ RUN a2enmod cgid
 # man表示用のインストール
 RUN apt install -y\
   curl \
+  dsniff \
   git \
   john \
   netcat-openbsd \
