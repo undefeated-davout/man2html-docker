@@ -6,7 +6,7 @@ RUN apt update &&\
   && apt autoremove && apt autoclean
 
 # ローカル以外からのアクセス許可設定
-ADD ./conf/ ./conf/
+COPY ./conf/ ./conf/
 RUN cp ./conf/man2html.conf /etc/apache2/conf-available/man2html.conf
 
 # CGI有効
