@@ -8,6 +8,7 @@ RUN apt update &&\
 
 # ローカル以外からのアクセス許可設定
 COPY ./conf/ ./conf/
+COPY ./settings/favicon.ico /var/www/html/
 RUN cp ./conf/man2html.conf /etc/apache2/conf-available/man2html.conf
 
 # CGI有効
