@@ -3,6 +3,7 @@ FROM debian:bookworm
 RUN apt update &&\
   apt install -y\
     man2html \
+    swish++ \
   && apt autoremove && apt autoclean
 
 # ローカル以外からのアクセス許可設定
