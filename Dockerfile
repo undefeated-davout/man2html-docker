@@ -17,12 +17,14 @@ RUN a2enmod cgid
 RUN DEBIAN_FRONTEND=noninteractive apt install -y \
   aircrack-ng \
   curl \
+  dnsutils \
   dsniff \
   git \
   gobuster \
   hashcat \
   htop \
   hydra \
+  iproute2 \
   iputils-ping \
   john \
   jq \
@@ -39,6 +41,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y \
   unar \
   unzip \
   wget \
+  whois \
   zip \
   && apt autoremove && apt autoclean
 
