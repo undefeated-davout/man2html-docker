@@ -19,6 +19,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y \
   curl \
   dnsutils \
   dsniff \
+  ftp \
   git \
   gobuster \
   hashcat \
@@ -30,10 +31,12 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y \
   jq \
   net-tools \
   netcat-openbsd \
+  network-manager \
   nmap \
   sqlmap \
   tar \
   tcpdump \
+  telnet \
   tmux \
   traceroute \
   tree \
