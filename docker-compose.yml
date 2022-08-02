@@ -1,8 +1,8 @@
 version: "3.8"
 services:
   man2html:
-    # build: .
-    image: undefeateddavout/man2html-docker
+    build: .
+    # image: undefeateddavout/man2html-docker
     container_name: man2html
     tty: true
     restart: always

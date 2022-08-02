@@ -1,7 +1,6 @@
 FROM debian:bookworm
 
-RUN apt update &&\
-  apt install -y\
+RUN apt update && apt install -y \
     man2html \
     swish++ \
   && apt autoremove && apt autoclean
@@ -15,17 +14,32 @@ RUN cp ./conf/man2html.conf /etc/apache2/conf-available/man2html.conf
 RUN a2enmod cgid
 
 # man表示用のインストール
-RUN apt install -y\
+RUN DEBIAN_FRONTEND=noninteractive apt install -y \
+  aircrack-ng \
   curl \
   dsniff \
   git \
+  gobuster \
+  hashcat \
+  htop \
+  hydra \
+  iputils-ping \
   john \
+  jq \
+  net-tools \
   netcat-openbsd \
   nmap \
+  sqlmap \
   tar \
+  tcpdump \
   tmux \
+  traceroute \
+  tree \
+  tshark \
+  unar \
   unzip \
   wget \
+  zip \
   && apt autoremove && apt autoclean
 
 CMD ["/bin/bash", "-c", "service apache2 start && tail -F /var/log/apache2/*"]
