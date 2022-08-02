@@ -20,6 +20,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y \
   dsniff \
   git \
   gobuster \
+  hashcat \
   htop \
   hydra \
   iputils-ping \
