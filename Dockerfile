@@ -33,6 +33,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y \
   netcat-openbsd \
   network-manager \
   nmap \
+  sudo \
   sqlmap \
   tar \
   tcpdump \
