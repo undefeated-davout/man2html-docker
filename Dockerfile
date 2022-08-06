@@ -47,6 +47,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y \
   wget \
   whois \
   zip \
+  zsh \
   && apt autoremove && apt autoclean
 
 CMD ["/bin/bash", "-c", "service apache2 start && tail -F /var/log/apache2/*"]
